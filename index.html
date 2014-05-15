@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Warranty Manager</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href="Content/jquery.mobile-1.4.2.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.icons-1.4.2.min.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.inline-svg-1.4.2.min.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.structure-1.4.2.min.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.theme-1.4.2.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="product-list" data-role="page">
+        <div data-role="header" data-position="fixed" >
+            <h1>Warrant Manager</h1>
+            <div data-role="navbar">
+                <ul>
+                    <!--<li><a href="#" data-icon="grid">List</a></li>-->
+                    <!--<li><a href="#product-page1" data-icon="star" class="ui-btn-active" data-bind="click:addProduct">New</a></li>-->
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+        <div role="main" class="ui-content">
+
+            <ul id="idProductList" data-role="listview" data-split-icon="delete" data-split-theme="d" data-bind="foreach: products">
+                <li data-bind="attr: { 'data-product': $data }">
+                    <!--<a data-transition="slide" data-bind="text: ProductName, click: $parent.getSelectedProduct"></a><a data-bind="click: $parent.deleteConfirm"></a>-->
+                    <a data-transition="slide" data-bind="text: ProductName"></a>
+                    <!--<a data-bind="click:$parent.removeProduct"></a>-->
+                </li>
+            </ul>
+
+        </div>
+        <div data-role="footer" data-position="fixed">copyright</div>
+    </div>
+
+    <!--<div id="product-page1" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>Product Details</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div id="details-wrap">
+                <div data-role="fieldcontain">
+                    <label for="productName">Name:</label>
+                    <input type="text" name="productName" data-bind="value: productName, valueUpdate: 'keypress'" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="productCategory">Category:</label>
+                    <input type="text" name="productCategory" data-bind="value: category, valueUpdate: 'keypress'" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="prodctBrand">Brand:</label>
+                    <input type="text" name="prodctBrand" data-bind="value: brand, valueUpdate: 'keypress'" />
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#product-list" data-icon="grid">Back</a></li>
+                    <li><a href="#product-page2" data-icon="star" class="ui-btn-active">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+
+    
+</body>
+<!--<script src="Scripts/jquery-1.8.3.min.js"></script>-->
+<script src="Scripts/jquery-1.8.3.js"></script>
+<script src="Scripts/jquery.mobile-1.4.2.min.js"></script>
+<script src="Scripts/knockout-3.1.0.js"></script>
+<script src="appScripts/app.js"></script>
+<script src="appScripts/DAL.js"></script>
+<script src="appScripts/product.js"></script>
+<script src="appScripts/productDAL.js"></script>
+<script src="appScripts/DBSchema.js"></script>
+<script src="appScripts/homeVM.js"></script>
+</html>
