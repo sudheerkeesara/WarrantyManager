@@ -41,9 +41,9 @@
 
             <ul id="idProductList" data-role="listview" data-split-icon="delete" data-split-theme="d" data-bind="foreach: products()">
                 <li data-bind="attr: { 'data-product': $data }">
-                    <!--<a data-transition="slide" data-bind="text: ProductName, click: $parent.getSelectedProduct"></a><a data-bind="click: $parent.deleteConfirm"></a>-->
-                    <a data-transition="slide" data-bind="text: ProductName"></a>
-                    <!--<a data-bind="click:$parent.removeProduct"></a>-->
+                    <a data-transition="slide" data-bind="text: ProductName, click: $parent.getSelectedProduct"></a>
+                    <!--<a data-transition="slide" data-bind="text: ProductName"></a>-->
+                    <a data-bind="click:$parent.removeProduct"></a>
                 </li>
             </ul>
 

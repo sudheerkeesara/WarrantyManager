@@ -12,7 +12,7 @@
     };
 
     var remove = function (deleteProductId) {
-        productDAL.deleteProduct(deleteProductId);
+        return productDAL.deleteProduct(deleteProductId);
     };
    
     return {

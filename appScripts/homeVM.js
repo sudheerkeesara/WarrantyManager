@@ -1,11 +1,17 @@
 ﻿var homeVM = (function ($) {
     //var products;
     var init = function () {
+        setupData();
          loadData();
     };
-    var loadData = function () {
+
+    var setupData = function () {
         dbSchema.createOrOpenDB();
         dbSchema.createOrGetTable();
+    };
+
+    var loadData = function () {
+      
         $.when(product.loadProducts())
             .then(function (pList) {
                 //homeVM.products = product.productsList;
@@ -50,10 +56,12 @@
 
     };
 
-
     var removeProduct = function (item) {
-        //products.remove(this);
-        //product.remove(item.Id);
+        $.when(product.remove(item.Id))
+           .then(function (pList) {
+               alert('product removed');
+               loadData();
+           });
     };
     init();
     return {

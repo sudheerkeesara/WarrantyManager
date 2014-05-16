@@ -66,9 +66,18 @@ var productDAL = (function () {
         });
     };
 
+    var deleteProduct = function (productId) {
+        var deferred = $.Deferred();
+        var sqlStatement = 'DELETE FROM ' + dbSchema.tables[0].name + ' WHERE Id=' + productId;
+        DAL.executeSQL(sqlStatement, function () {
+             deferred.resolve();
+        });
+        return deferred.promise();
+    };
 
     return {
         getAllProducts: getAllProducts,
-        insertProduct: insertProduct
+        insertProduct: insertProduct,
+        deleteProduct: deleteProduct
     };
 })();
