@@ -2,7 +2,7 @@
     var productsList = ko.observableArray();
     var currentProduct;
     var loadProducts = function () {
-        var deferred = $.Deffered();
+        var deferred = $.Deferred();
         $.when(productDAL.getAllProducts())
             .then(function (pList) {
                 product.productsList(pList);
