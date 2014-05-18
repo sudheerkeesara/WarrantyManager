@@ -60,6 +60,7 @@
     <Content Include="appScripts\app.js" />
     <Content Include="appScripts\DAL.js" />
     <Content Include="appScripts\DBSchema.js" />
+    <Content Include="appScripts\productEdit1VM.js" />
     <Content Include="appScripts\product.js" />
     <Content Include="appScripts\homeVM.js" />
     <Content Include="appScripts\productDAL.js" />
@@ -294,6 +295,8 @@
     <Content Include="Scripts\jquery.mobile-1.4.2.min.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery.mobile-1.4.2.min.map" />
   </ItemGroup>
@@ -301,6 +304,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\underscore-min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

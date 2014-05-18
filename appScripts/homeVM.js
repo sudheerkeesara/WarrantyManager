@@ -63,11 +63,19 @@
                loadData();
            });
     };
+
+    var showProductDetails = function (item) {
+        tempObj.currentProductId = item.Id;
+        product.setCurrentProduct(item.Id);
+        $.mobile.changePage("#product-page1");
+    };
+
     init();
     return {
         products: products,
         init: init,
         removeProduct: removeProduct,
-        addProduct: addProduct
+        addProduct: addProduct,
+        showProductDetails:showProductDetails
     };
 })(jQuery);
