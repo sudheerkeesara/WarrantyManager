@@ -45,6 +45,7 @@
             'Notes': 'This is iPhone 4S'
         };
 
+		
         productDAL.insertProduct(productDetails, function (insertedProduct) {
             //var pname = insertedProduct.ProductName.replace("'", "").replace("'", "");
             //var productImageName = insertedProduct.Id + "-" + pname + "-pImage.png";
